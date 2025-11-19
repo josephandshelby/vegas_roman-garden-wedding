@@ -38,7 +38,7 @@ body {
 
 /* ---------- HERO ---------- */
 .hero {
-    height: 70vh;
+    height: 80vh;
     background: url('venus_garden.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
@@ -136,7 +136,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     font-size: 3rem;
-    color: rgba(0,0,0,0.6);
+    color: #ffffff; /* <-- PURE WHITE ARROWS */
     cursor: pointer;
 
     /* force arrows above everything */
@@ -473,5 +473,6 @@ footer {
         height: auto;
     }
 }
+
 
 
