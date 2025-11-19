@@ -1,13 +1,44 @@
 /* ---------- IMPORT FONTS ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
 
-/* ---------- GLOBAL ---------- */
+/* =========================================================
+   INTRO OVERLAY (VEGAS SVG SCREEN)
+   ========================================================= */
+.intro-screen {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Make sure SVG covers the screen */
+#vegas-intro-svg {
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
+
+/* Stars should still shine using native SVG animation */
+.intro-screen svg {
+    pointer-events: none;
+}
+
+/* After scroll, the rest of the page begins */
+#main-content {
+    margin-top: 0;
+}
+
+
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
 body {
     margin: 0;
     font-family: "Cormorant Garamond", serif;
     color: #333;
 
-    /* Full-page repeating background image */
     background: url('background-image.jpg') repeat;
     background-size: auto;
     background-attachment: fixed;
@@ -15,7 +46,11 @@ body {
     font-size: 1.25rem;
 }
 
-/* ---------- HERO ---------- */
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
 .hero {
     height: 70vh;
     background: url('venus_garden.jpg') center/cover no-repeat;
@@ -40,20 +75,12 @@ body {
     max-width: 85%;
 }
 
-/* Hero font — Cinzel for the Roman look */
 .hero h1,
 .hero h2 {
     font-family: "Cinzel", serif;
     color: #000;
     margin: 0.5em 0;
     letter-spacing: 1px;
-}
-
-.hero p {
-    font-size: 1.7rem;
-    font-family: "Cormorant Garamond", serif;
-    color: #000;
-    margin: 0.5em 0;
 }
 
 .hero h1 {
@@ -66,14 +93,19 @@ body {
 
 .hero p {
     font-size: 1.7rem;
+    font-family: "Cormorant Garamond", serif;
+    color: #000;
 }
 
-/* ---------- SLIDESHOW SECTION ---------- */
+
+
+/* =========================================================
+   SLIDESHOW
+   ========================================================= */
 .slideshow-section {
     padding: 20px 0;
 }
 
-/* White box around slideshow */
 .slideshow-container {
     max-width: 1000px;
     margin: 30px auto;
@@ -86,7 +118,6 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
-    z-index: 1;
 }
 
 .slideshow-track {
@@ -98,24 +129,19 @@ body {
     width: 100%;
     height: auto;
     object-fit: contain;
-
     padding: 10px;
     background: #fff;
     border-radius: 10px;
-
     flex-shrink: 0;
-
-    position: relative;
-    z-index: 1;
 }
 
-/* Slideshow arrows — fix click issue */
+/* Arrows */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 3rem;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
     z-index: 9999 !important;
 }
@@ -123,7 +149,11 @@ body {
 .arrow-left { left: 10px; }
 .arrow-right { right: 10px; }
 
-/* ---------- WHITE SECTIONS BELOW ---------- */
+
+
+/* =========================================================
+   WHITE CONTENT SECTIONS
+   ========================================================= */
 .body-background section {
     background: rgba(255, 255, 255, 0.85);
     padding: 50px 20px;
@@ -133,12 +163,15 @@ body {
     text-align: center;
 }
 
-/* Remove white line above first section */
 .about {
     margin-top: 0 !important;
 }
 
-/* ---------- DETAILS ---------- */
+
+
+/* =========================================================
+   DETAILS (DATE/TIME, LOCATION, ATTIRE)
+   ========================================================= */
 .detail-grid {
     display: flex;
     flex-direction: column;
@@ -147,21 +180,22 @@ body {
 }
 
 .detail-item h3 {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-}
-
-.detail-item p {
-    font-size: 1.3rem;
-    line-height: 1.5;
-}
-
-/* Make only the wedding date larger */
-.big-date {
     font-size: 2rem;
 }
 
-/* ---------- SCHEDULE ---------- */
+.detail-item p {
+    font-size: 1.6rem;
+}
+
+.big-date {
+    font-size: 2.3rem;
+}
+
+
+
+/* =========================================================
+   ITINERARY
+   ========================================================= */
 .schedule ul {
     list-style: none;
     padding: 0;
@@ -175,7 +209,11 @@ body {
     color: #5F7B5A;
 }
 
-/* ---------- FORMS ---------- */
+
+
+/* =========================================================
+   FORMS
+   ========================================================= */
 .form-section form {
     max-width: 500px;
     margin: 0 auto;
@@ -201,21 +239,28 @@ button {
     cursor: pointer;
 }
 
-/* ---------- MAP ---------- */
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
 .map-section iframe {
     width: 90%;
     height: 500px;
     border: none;
 }
 
-/* ---------- VIDEO ---------- */
+
+
+/* =========================================================
+   VIDEOS
+   ========================================================= */
 .video-section iframe {
     width: 90%;
     height: 500px;
     border: none;
 }
 
-/* ---------- LATE NIGHT VIDEO ---------- */
 .late-night-video iframe {
     width: 100%;
     max-width: 900px;
@@ -226,17 +271,11 @@ button {
     border-radius: 12px;
 }
 
-/* ---------- ACCOMMODATIONS & ACTIVITIES ---------- */
-.accommodations-section h2 {
-    font-size: 2.4rem;
-}
 
-.accommodations-section p {
-    font-size: 1.45rem;
-    line-height: 1.6;
-}
 
-/* ---------- BUFFET TEXT ---------- */
+/* =========================================================
+   DINING EXPERIENCE
+   ========================================================= */
 .buffet-info-section {
     background: rgba(255, 255, 255, 0.85);
     padding: 50px 20px;
@@ -246,7 +285,11 @@ button {
     text-align: center;
 }
 
-/* ---------- BUFFET GALLERY ---------- */
+
+
+/* =========================================================
+   BUFFET PHOTO GALLERY
+   ========================================================= */
 .buffet-gallery {
     max-width: 1000px;
     margin: 20px auto;
@@ -261,14 +304,12 @@ button {
     border-radius: 8px;
 }
 
-/* Top full-width image */
 .buffet-full img {
     width: 100%;
     height: 400px;
     margin-bottom: 20px;
 }
 
-/* Centered single image */
 .buffet-single {
     text-align: center;
 }
@@ -281,7 +322,6 @@ button {
     object-fit: cover;
 }
 
-/* Two image row */
 .buffet-row {
     display: flex;
     gap: 20px;
@@ -294,7 +334,25 @@ button {
     object-fit: cover;
 }
 
-/* ---------- FOOTER ---------- */
+
+
+/* =========================================================
+   ACCOMMODATIONS & ACTIVITIES
+   ========================================================= */
+.accommodations-section h2 {
+    font-size: 2.4rem;
+}
+
+.accommodations-section p {
+    font-size: 1.45rem;
+    line-height: 1.6;
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -302,30 +360,11 @@ footer {
     color: #444;
 }
 
-/* ============================================================
-   ✨ TEXT SIZE UPGRADES FOR ALL MAJOR SECTIONS
-   ============================================================ */
 
-.about h2,
-.details h3,
-.schedule h2,
-.buffet-info-section h2,
-.additional-dining h2,
-.late-night-section h2 {
-    font-size: 2.4rem !important;
-}
 
-.about p,
-.detail-item p,
-.schedule li,
-.buffet-info-section p,
-.additional-dining p,
-.late-night-section p {
-    font-size: 1.45rem !important;
-    line-height: 1.6;
-}
-
-/* ---------- MOBILE OPTIMIZATION ---------- */
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
 @media (max-width: 768px) {
 
     body {
@@ -393,11 +432,11 @@ footer {
     }
 
     .detail-item p {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
     }
 
     .detail-item h3 {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
     }
 
     .schedule ul {
@@ -409,4 +448,3 @@ footer {
         text-align: center;
     }
 }
-
