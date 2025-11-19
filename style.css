@@ -1,44 +1,34 @@
-/* ---------- IMPORT FONTS ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+/* ===== VEGAS INTRO FULL-PAGE OVERLAY ===== */
 
-/* =========================================================
-   INTRO OVERLAY (VEGAS SVG SCREEN)
-   ========================================================= */
-.intro-screen {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    background: #000;
-}
-
-/* Make sure SVG covers the screen */
-#vegas-intro-svg {
+#intro-wrapper {
     width: 100%;
     height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 9999;
+}
+
+#intro-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
     display: block;
 }
 
-/* Stars should still shine using native SVG animation */
-.intro-screen svg {
-    pointer-events: none;
-}
-
-/* After scroll, the rest of the page begins */
-#main-content {
-    margin-top: 0;
-}
+/* ===== END VEGAS INTRO STYLES ===== */
 
 
 
-/* =========================================================
-   GLOBAL
-   ========================================================= */
+/* ---------- IMPORT FONTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/* ---------- GLOBAL ---------- */
 body {
     margin: 0;
     font-family: "Cormorant Garamond", serif;
     color: #333;
 
+    /* Full-page repeating background image */
     background: url('background-image.jpg') repeat;
     background-size: auto;
     background-attachment: fixed;
@@ -46,11 +36,7 @@ body {
     font-size: 1.25rem;
 }
 
-
-
-/* =========================================================
-   HERO SECTION
-   ========================================================= */
+/* ---------- HERO ---------- */
 .hero {
     height: 70vh;
     background: url('venus_garden.jpg') center/cover no-repeat;
@@ -75,6 +61,7 @@ body {
     max-width: 85%;
 }
 
+/* Hero font — Cinzel for the Roman look */
 .hero h1,
 .hero h2 {
     font-family: "Cinzel", serif;
@@ -83,8 +70,15 @@ body {
     letter-spacing: 1px;
 }
 
+.hero p {
+    font-size: 1.7rem;
+    font-family: "Cormorant Garamond", serif;
+    color: #000;
+    margin: 0.5em 0;
+}
+
 .hero h1 {
-    font-size: 4rem;
+    font-size: 4rem;          /* larger */
 }
 
 .hero h2 {
@@ -93,19 +87,14 @@ body {
 
 .hero p {
     font-size: 1.7rem;
-    font-family: "Cormorant Garamond", serif;
-    color: #000;
 }
 
-
-
-/* =========================================================
-   SLIDESHOW
-   ========================================================= */
+/* ---------- SLIDESHOW SECTION ---------- */
 .slideshow-section {
     padding: 20px 0;
 }
 
+/* White box around slideshow */
 .slideshow-container {
     max-width: 1000px;
     margin: 30px auto;
@@ -118,6 +107,7 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
 .slideshow-track {
@@ -129,31 +119,34 @@ body {
     width: 100%;
     height: auto;
     object-fit: contain;
+
     padding: 10px;
     background: #fff;
     border-radius: 10px;
+
     flex-shrink: 0;
+
+    position: relative;
+    z-index: 1;
 }
 
-/* Arrows */
+/* Slideshow arrows — fix click issue */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 3rem;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0,0,0,0.6);
     cursor: pointer;
+
+    /* force arrows above everything */
     z-index: 9999 !important;
 }
 
 .arrow-left { left: 10px; }
 .arrow-right { right: 10px; }
 
-
-
-/* =========================================================
-   WHITE CONTENT SECTIONS
-   ========================================================= */
+/* ---------- WHITE SECTIONS BELOW ---------- */
 .body-background section {
     background: rgba(255, 255, 255, 0.85);
     padding: 50px 20px;
@@ -163,15 +156,12 @@ body {
     text-align: center;
 }
 
+/* FIX: Remove white line above first section */
 .about {
     margin-top: 0 !important;
 }
 
-
-
-/* =========================================================
-   DETAILS (DATE/TIME, LOCATION, ATTIRE)
-   ========================================================= */
+/* ---------- DETAILS ---------- */
 .detail-grid {
     display: flex;
     flex-direction: column;
@@ -180,22 +170,21 @@ body {
 }
 
 .detail-item h3 {
-    font-size: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
 }
 
 .detail-item p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.5;
 }
 
+/* Make only the wedding date larger */
 .big-date {
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
-
-
-/* =========================================================
-   ITINERARY
-   ========================================================= */
+/* ---------- SCHEDULE ---------- */
 .schedule ul {
     list-style: none;
     padding: 0;
@@ -209,11 +198,7 @@ body {
     color: #5F7B5A;
 }
 
-
-
-/* =========================================================
-   FORMS
-   ========================================================= */
+/* ---------- FORMS ---------- */
 .form-section form {
     max-width: 500px;
     margin: 0 auto;
@@ -239,28 +224,21 @@ button {
     cursor: pointer;
 }
 
-
-
-/* =========================================================
-   MAP
-   ========================================================= */
+/* ---------- MAP ---------- */
 .map-section iframe {
     width: 90%;
     height: 500px;
     border: none;
 }
 
-
-
-/* =========================================================
-   VIDEOS
-   ========================================================= */
+/* ---------- VIDEO ---------- */
 .video-section iframe {
     width: 90%;
     height: 500px;
     border: none;
 }
 
+/* ---------- LATE NIGHT VIDEO (BIGGER) ---------- */
 .late-night-video iframe {
     width: 100%;
     max-width: 900px;
@@ -271,11 +249,7 @@ button {
     border-radius: 12px;
 }
 
-
-
-/* =========================================================
-   DINING EXPERIENCE
-   ========================================================= */
+/* ---------- BUFFET TEXT ---------- */
 .buffet-info-section {
     background: rgba(255, 255, 255, 0.85);
     padding: 50px 20px;
@@ -285,11 +259,7 @@ button {
     text-align: center;
 }
 
-
-
-/* =========================================================
-   BUFFET PHOTO GALLERY
-   ========================================================= */
+/* ---------- BUFFET GALLERY ---------- */
 .buffet-gallery {
     max-width: 1000px;
     margin: 20px auto;
@@ -304,12 +274,14 @@ button {
     border-radius: 8px;
 }
 
+/* Top full-width image */
 .buffet-full img {
     width: 100%;
     height: 400px;
     margin-bottom: 20px;
 }
 
+/* Centered single image */
 .buffet-single {
     text-align: center;
 }
@@ -322,6 +294,7 @@ button {
     object-fit: cover;
 }
 
+/* Two image row */
 .buffet-row {
     display: flex;
     gap: 20px;
@@ -334,25 +307,7 @@ button {
     object-fit: cover;
 }
 
-
-
-/* =========================================================
-   ACCOMMODATIONS & ACTIVITIES
-   ========================================================= */
-.accommodations-section h2 {
-    font-size: 2.4rem;
-}
-
-.accommodations-section p {
-    font-size: 1.45rem;
-    line-height: 1.6;
-}
-
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
+/* ---------- FOOTER ---------- */
 footer {
     text-align: center;
     padding: 30px 20px;
@@ -360,11 +315,7 @@ footer {
     color: #444;
 }
 
-
-
-/* =========================================================
-   MOBILE RESPONSIVE
-   ========================================================= */
+/* ---------- MOBILE OPTIMIZATION ---------- */
 @media (max-width: 768px) {
 
     body {
@@ -432,11 +383,11 @@ footer {
     }
 
     .detail-item p {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .detail-item h3 {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
     }
 
     .schedule ul {
@@ -448,3 +399,4 @@ footer {
         text-align: center;
     }
 }
+
