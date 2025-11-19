@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joseph & Shelby — Roman Garden Wedding</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Joseph & Shelby</h1>
+            <h2>A Roman Garden Wedding</h2>
+            <p>September 16, 2026 · Caesars Palace · Las Vegas</p>
+        </div>
+    </header>
+
+    <!-- FULL-WIDTH ENGAGEMENT SLIDESHOW -->
+    <section class="slideshow-section">
+        <div class="slideshow-wrapper">
+
+            <!-- IMAGE TRACK -->
+            <div class="slideshow-track">
+                <img src="engagement1.jpg" alt="Engagement photo 1">
+                <img src="engagement2.jpg" alt="Engagement photo 2">
+                <img src="engagement3.jpg" alt="Engagement photo 3">
+                <img src="engagement4.jpg" alt="Engagement photo 4">
+                <img src="engagement5.jpg" alt="Engagement photo 5">
+                <img src="engagement6.jpg" alt="Engagement photo 6">
+                <img src="engagement7.jpg" alt="Engagement photo 7">
+                <img src="engagement8.jpg" alt="Engagement photo 8">
+            </div>
+
+            <!-- LEFT/RIGHT ARROWS -->
+            <div class="arrow arrow-left">&#10094;</div>
+            <div class="arrow arrow-right">&#10095;</div>
+
+        </div>
+    </section>
+
+    <div class="body-background">
+        <!-- ABOUT SECTION -->
+        <section class="about">
+            <h2>Welcome to Our Celebration</h2>
+            <p>
+                Join us for an elegant Roman Garden wedding at the iconic Caesars Palace in Las Vegas.
+                Surrounded by classical statues, marble columns, and floral beauty, we invite you to share this unforgettable day with us.
+            </p>
+        </section>
+
+        <!-- DETAILS SECTION -->
+        <section class="details">
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <h3>Date & Time</h3>
+                    <p>Arrival at Ceremony Venue: 5:00 PM<br>Ceremony: 5:30 PM<br>Bridal Party Photos: 6:00 PM<br>Optional Buffet Dinner: 7:15 PM<br>Party on the Strip: 10:00 PM</p>
+                </div>
+                <div class="detail-item">
+                    <h3>Location</h3>
+                    <p>Caesars Palace<br>3570 S Las Vegas Blvd<br>Paradise, NV 89109</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCHEDULE SECTION -->
+        <section class="schedule">
+            <ul>
+                <li><span>5:00 PM</span> — Arrival at Ceremony Venue</li>
+                <li><span>5:30 PM</span> — Ceremony</li>
+                <li><span>6:00 PM</span> — Bridal Party Photos</li>
+                <li><span>7:15 PM</span> — Optional Buffet Dinner</li>
+                <li><span>10:00 PM</span> — Party on the Strip</li>
+            </ul>
+        </section>
+
+        <!-- WEDDING RSVP FORM -->
+        <section class="form-section">
+            <h2>Wedding RSVP</h2>
+            <form id="weddingForm">
+                <input type="text" name="name" placeholder="Full Name*" required />
+                <input type="email" name="email" placeholder="Email*" required />
+                <select name="attending" required>
+                    <option value="">Will you attend?*</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <input type="number" name="guests" placeholder="Number of Guests" min="0" />
+                <button type="submit">Submit RSVP</button>
+            </form>
+            <div id="weddingMessage" class="form-message"></div>
+        </section>
+
+        <!-- BUFFET RSVP -->
+        <section class="form-section buffet">
+            <h2>Buffet RSVP — Optional</h2>
+            <p>Cost: <strong>$150 for Adults</strong>, <strong>$85 for Children (ages 4-10)</strong></p>
+            <form id="buffetForm">
+                <input type="text" name="name" placeholder="Full Name*" required />
+                <input type="email" name="email" placeholder="Email*" required />
+                <input type="number" name="buffetGuests" placeholder="Number of Buffet Guests*" min="0" required />
+                <label class="checkbox">
+                    <input type="checkbox" required />
+                    I acknowledge the buffet cost.
+                </label>
+                <button type="submit">Submit Buffet RSVP</button>
+            </form>
+            <div id="buffetMessage" class="form-message"></div>
+        </section>
+
+        <!-- MAP -->
+        <section class="map-section">
+            <h2>Location</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.303066551512!2d-115.17666022364946!3d36.11654597244383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c42b1b582d51%3A0xecd8f2fa2a3434a4!2sCaesars%20Palace!5e0!3m2!1sen!2sus!4v1709333500000"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+        </section>
+
+        <!-- VIDEO SECTION -->
+        <section class="video-section">
+            <iframe
+                src="https://www.youtube.com/embed/9uZ8CCa0t4Y?autoplay=0&mute=1&loop=1&playlist=9uZ8CCa0t4Y"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Joseph & Shelby · September 16, 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
