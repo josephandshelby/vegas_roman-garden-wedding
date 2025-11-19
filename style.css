@@ -1,5 +1,5 @@
 /* ---------- IMPORT FONTS ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
 /* ---------- GLOBAL ---------- */
 body {
@@ -43,7 +43,7 @@ body {
 .hero h1, .hero h2, .hero p {
     color: #000;
     margin: 0.5em 0;
-    font-family: "Great Vibes", cursive; /* cursive font */
+    font-family: "Pinyon Script", cursive; /* cursive font */
 }
 
 .hero h1 {
@@ -363,3 +363,4 @@ footer {
         text-align: center;
     }
 }
+
