@@ -95,17 +95,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /******************************************************
-     * GOOGLE SCRIPT WEB APP URLS
+     * GOOGLE SCRIPT WEB APP URLS (UPDATED)
      ******************************************************/
-    const WEDDING_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxcgsO_6g6j-2U-eY-fS4OFnYDiOeRc8k4pTmSV21HLmAK0PqkYSI60WtIZfQv7mq9k/exec";
-    const BUFFET_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbznywH5K20OIYNQZBmfDdpCLiesMLbw18uauI85LYoii4mqVVTVPUFrnFx2VOEfJoW36Q/exec";
+    const WEDDING_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbzkrKRLMpxV1C8DdGnLGR8Wtr8e4AdVq8dW2qNkQhTsROHPUyDw6GDWfO9JNbtMzzw1/exec";
+
+    const BUFFET_SCRIPT_URL =
+        "https://script.google.com/macros/s/AKfycbxKADngM8LYDCGs5Nc6CJXlaSJhTjVPlWm6Sdol0Nv0Luw8z9jBFiz5NvXeBn0TIzAklQ/exec";
 
     /******************************************************
      * FORM SUBMISSION HANDLER
      ******************************************************/
-    async function submitForm(form, messageBox, url) {
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData.entries());
+    async function submitForm(data, messageBox, url, resetCallback) {
 
         try {
             const response = await fetch(url, {
@@ -116,18 +117,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const result = await response.json();
 
             if (result.result === "success") {
-                messageBox.textContent = `Thank you, ${data.name || "Guest"}! Your RSVP has been recorded.`;
+                messageBox.textContent =
+                    `Thank you, ${data.name || "Guest"}! Your RSVP has been recorded.`;
             } else {
                 messageBox.textContent = "There was a problem submitting your RSVP.";
             }
-
-        } catch (error) {
+        } catch (err) {
             messageBox.textContent = "Unable to connect. Please try again.";
         }
 
         messageBox.style.opacity = 1;
-
-        form.reset();
+        resetCallback();
 
         setTimeout(() => {
             messageBox.style.opacity = 0;
@@ -135,42 +135,40 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /******************************************************
-     * CONNECT FORMS TO URLS
+     * WEDDING FORM
      ******************************************************/
     const weddingForm = document.getElementById("weddingForm");
-    const buffetForm = document.getElementById("buffetForm");
     const weddingMessage = document.getElementById("weddingMessage");
-    const buffetMessage = document.getElementById("buffetMessage");
 
     if (weddingForm) {
         weddingForm.addEventListener("submit", (e) => {
             e.preventDefault();
-            submitForm(weddingForm, weddingMessage, WEDDING_SCRIPT_URL);
+
+            const formData = new FormData(weddingForm);
+            const data = Object.fromEntries(formData.entries());
+
+            submitForm(data, weddingMessage, WEDDING_SCRIPT_URL, () => weddingForm.reset());
         });
     }
+
+    /******************************************************
+     * BUFFET FORM
+     ******************************************************/
+    const buffetForm = document.getElementById("buffetForm");
+    const buffetMessage = document.getElementById("buffetMessage");
 
     if (buffetForm) {
         buffetForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            // Add missing checkbox data
-            const check = buffetForm.querySelector("input[type='checkbox']");
-            const acknowledgedFee = check?.checked ? "Yes" : "No";
-
             const formData = new FormData(buffetForm);
-            formData.append("acknowledgedFee", acknowledgedFee);
+            const data = Object.fromEntries(formData.entries());
 
-            const messageBox = buffetMessage;
+            // attach checkbox value
+            const check = buffetForm.querySelector("input[type='checkbox']");
+            data.acknowledgedFee = check?.checked ? "Yes" : "No";
 
-            // custom submit for buffet with extra field
-            submitForm(
-                {
-                    reset: () => buffetForm.reset(),
-                    entries: () => formData.entries()
-                },
-                messageBox,
-                BUFFET_SCRIPT_URL
-            );
+            submitForm(data, buffetMessage, BUFFET_SCRIPT_URL, () => buffetForm.reset());
         });
     }
 
