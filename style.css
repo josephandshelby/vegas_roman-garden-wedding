@@ -437,4 +437,41 @@ footer {
     line-height: 1.65;
 }
 
+/* ============================================================
+   MOBILE FIX — Make Vegas Intro Responsive
+   ============================================================ */
+
+#vegas-intro {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+/* Mobile scaling */
+@media (max-width: 768px) {
+
+    #vegas-intro {
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    /* Scale down the embedded SVG/page */
+    #vegas-intro object {
+        transform: scale(0.85);
+        transform-origin: top center;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    #vegas-intro object {
+        transform: scale(0.72);
+        transform-origin: top center;
+        width: 100%;
+        height: auto;
+    }
+}
+
 
