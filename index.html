@@ -9,59 +9,75 @@
 
 <body>
 
-    <!-- ========================================================= -->
-    <!--                  INTRO SVG FULLSCREEN SECTION             -->
-    <!-- ========================================================= -->
-    <section id="intro-screen">
-        <object type="text/html" data="vegas_intro.html" class="intro-svg"></object>
-    </section>
+    <!-- ===================================================== -->
+    <!-- VEGAS INTRO — FULL SCREEN SECTION (ONLY CHANGE ADDED) -->
+    <!-- ===================================================== -->
+    <div id="vegas-intro" style="width:100%; height:100vh; margin:0; padding:0; overflow:hidden;">
+        <object 
+            data="vegas_intro.html" 
+            type="text/html" 
+            style="width:100%; height:100vh; border:none; display:block;">
+        </object>
+    </div>
+    <!-- ===================================================== -->
+    <!-- END VEGAS INTRO SECTION                               -->
+    <!-- ===================================================== -->
 
-    <!-- ========================================================= -->
-    <!--                  MAIN SITE CONTENT BEGINS                 -->
-    <!-- ========================================================= -->
-    <div id="main-content">
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Joseph & Shelby</h1>
+            <h2>A Roman Garden Wedding</h2>
+            <p>September 16, 2026 · Caesars Palace · Las Vegas</p>
+        </div>
+    </header>
 
-        <!-- HERO SECTION -->
-        <header class="hero">
-            <div class="overlay"></div>
-            <div class="hero-content">
-                <h1>Joseph & Shelby</h1>
-                <h2>A Roman Garden Wedding</h2>
-                <p>September 16, 2026 · Caesars Palace · Las Vegas</p>
+   <!-- FULL-WIDTH ENGAGEMENT SLIDESHOW -->
+<section class="slideshow-section">
+    <div class="slideshow-container">
+        <div class="slideshow-wrapper">
+
+            <!-- IMAGE TRACK -->
+            <div class="slideshow-track">
+                <img src="engagement1.jpg" alt="Engagement photo 1">
+                <img src="engagement2.jpg" alt="Engagement photo 2">
+                <img src="engagement3.jpg" alt="Engagement photo 3">
+                <img src="engagement4.jpg" alt="Engagement photo 4">
+                <img src="engagement5.jpg" alt="Engagement photo 5">
+                <img src="engagement6.jpg" alt="Engagement photo 6">
+                <img src="engagement7.jpg" alt="Engagement photo 7">
+                <img src="engagement8.jpg" alt="Engagement photo 8">
             </div>
-        </header>
 
-        <!-- FULL-WIDTH ENGAGEMENT SLIDESHOW -->
-        <section class="slideshow-section">
-            <div class="slideshow-container">
-                <div class="slideshow-wrapper">
+            <!-- LEFT/RIGHT ARROWS -->
+            <div class="arrow arrow-left">&#10094;</div>
+            <div class="arrow arrow-right">&#10095;</div>
 
-                    <div class="slideshow-track">
-                        <img src="engagement1.jpg" alt="Engagement photo 1">
-                        <img src="engagement2.jpg" alt="Engagement photo 2">
-                        <img src="engagement3.jpg" alt="Engagement photo 3">
-                        <img src="engagement4.jpg" alt="Engagement photo 4">
-                        <img src="engagement5.jpg" alt="Engagement photo 5">
-                        <img src="engagement6.jpg" alt="Engagement photo 6">
-                        <img src="engagement7.jpg" alt="Engagement photo 7">
-                        <img src="engagement8.jpg" alt="Engagement photo 8">
-                    </div>
+        </div>
+    </div>
+</section>
 
-                    <div class="arrow arrow-left">&#10094;</div>
-                    <div class="arrow arrow-right">&#10095;</div>
+    <div class="body-background">
 
-                </div>
-            </div>
-        </section>
-
-        <!-- ABOUT (OUR STORY) -->
+        <!-- ABOUT / OUR STORY SECTION -->
         <section class="about">
             <h2>Our Story</h2>
-            <p>What began as a simple spark between two people quickly grew into something neither of us could ignore. From the very first conversation, Joseph felt an ease and warmth with Shelby that felt like coming home, and Shelby found in Joseph a steady, genuine presence she had always hoped to find.
-            <br><br>
-            Our connection deepened through shared laughs, the love of our pets, late-night chats, holiday decorations, and our dark addiction to antique shopping (we need help). Bit by bit, friendship turned into partnership, and partnership turned into the kind of love that makes life feel fuller, brighter, and more vibrant and enduring with every step we take.
-            <br><br>
-            Together, we’ve built a relationship filled with adventure, growth, and an unwavering support for each other’s dreams. And now, as we prepare to say “I do” in the timeless elegance of the Venus Gardens, we’re celebrating not just a wedding day, but the journey that brought us here. Join us for an elegant Roman Garden ceremony at the iconic Caesars Palace in Las Vegas—where we can lose our life savings, witness things we’ll never be able to explain, and fully embrace the true Vegas experience together. We’d be honored to have you be a part of this celebration!</p>
+            <p>
+                What began as a simple spark between two people quickly grew into something neither of us could ignore. 
+                From the very first conversation, Joseph felt an ease and warmth with Shelby that felt like coming home, 
+                and Shelby found in Joseph a steady, genuine presence she had always hoped to find.
+                <br><br>
+                Our connection deepened through shared laughs, holiday decorations, the love of our pets, late-night chats, 
+                and our dark addiction to antique shopping (we need help). Bit by bit, friendship turned into partnership, 
+                and partnership turned into the kind of love that makes life feel fuller, brighter, and more vibrant with every step we take.
+                <br><br>
+                Together, we’ve built a relationship filled with adventure, growth, and unwavering support for one another. 
+                And now, as we prepare to say “I do” in the timeless elegance of the Venus Gardens, we’re celebrating not just a wedding day, 
+                but the journey that brought us here. Join us for an elegant Roman Garden ceremony at the iconic Caesars Palace in Las Vegas—where 
+                we can lose our life savings, witness things we’ll never be able to explain, and fully embrace the true Vegas experience together. 
+                We’d be honored to have you be a part of this celebration!
+            </p>
         </section>
 
         <!-- DETAILS SECTION -->
@@ -71,32 +87,30 @@
                     <h3>Date & Time</h3>
                     <p class="big-date"><strong>Wednesday, September 16th, 2026</strong></p>
                 </div>
-
                 <div class="detail-item">
                     <h3>Location</h3>
                     <p>Caesars Palace<br>3570 S Las Vegas Blvd<br>Paradise, NV 89109</p>
                 </div>
-
                 <div class="detail-item">
                     <h3>Attire</h3>
-                    <p>Formal attire is respectfully requested for this occasion.</p>
+                    <p>Formal attire is respectfully requested for this occasion</p>
                 </div>
             </div>
         </section>
 
-        <!-- ITINERARY -->
-        <section class="schedule">
-            <h2>Itinerary</h2>
-            <ul>
-                <li><span>5:00 PM</span> — Arrival at Ceremony Venue</li>
-                <li><span>5:30 PM</span> — Ceremony</li>
-                <li><span>6:00 PM</span> — Bridal Party Photos</li>
-                <li><span>7:15 PM</span> — Optional Buffet Dinner</li>
-                <li><span>10:00 PM</span> — Party on the Strip</li>
-            </ul>
-        </section>
+        <!-- SCHEDULE SECTION -->
+<section class="schedule">
+    <h2>Itinerary</h2>
+    <ul>
+        <li><span>5:00 PM</span> — Arrival at Ceremony Venue</li>
+        <li><span>5:30 PM</span> — Ceremony</li>
+        <li><span>6:00 PM</span> — Bridal Party Photos</li>
+        <li><span>7:15 PM</span> — Optional Buffet Dinner</li>
+        <li><span>10:00 PM</span> — Party on the Strip</li>
+    </ul>
+</section>
 
-        <!-- WEDDING RSVP -->
+        <!-- WEDDING RSVP FORM -->
         <section class="form-section">
             <h2>Wedding RSVP</h2>
             <form id="weddingForm">
@@ -113,34 +127,36 @@
             <div id="weddingMessage" class="form-message"></div>
         </section>
 
-        <!-- DINING EXPERIENCE (BUFFET DESCRIPTION) -->
-        <section class="buffet-info-section">
-            <h2>Dining Experience</h2>
-            <p>
-                After the ceremony, we invite you to continue the celebration with an unforgettable culinary experience at the renowned Bacchanal Buffet at Caesars Palace...
-            </p>
-        </section>
+<!-- DINING EXPERIENCE -->
+<section class="buffet-info-section">
+    <h2>Dining Experience</h2>
+    <p>
+        After the ceremony, we invite you to continue the celebration with an unforgettable culinary experience 
+        at the renowned Bacchanal Buffet at Caesars Palace...
+    </p>
+</section>
 
-        <!-- BUFFET GALLERY -->
-        <section class="buffet-gallery">
-            <div class="buffet-full"><img src="buffet1.jpg"></div>
-            <div class="buffet-single"><img src="buffet3.jpg"></div>
-            <div class="buffet-row">
-                <img src="buffet4.jpg">
-                <img src="buffet2.jpg">
-            </div>
-        </section>
+<!-- BUFFET PHOTO GALLERY -->
+<section class="buffet-gallery">
+    <div class="buffet-full"><img src="buffet1.jpg"></div>
+    <div class="buffet-single"><img src="buffet3.jpg"></div>
+    <div class="buffet-row">
+        <img src="buffet4.jpg">
+        <img src="buffet2.jpg">
+    </div>
+</section>
 
+        
         <!-- BUFFET RSVP -->
         <section class="form-section buffet">
             <h2>Buffet RSVP — Optional</h2>
-            <p>Cost: <strong>$150 for Adults</strong>, <strong>$85 for Children (ages 4-10)</strong></p>
+            <p>Cost: <strong>$150 for Adults</strong>, <strong>$85 for Children</strong></p>
             <form id="buffetForm">
                 <input type="text" name="name" placeholder="Full Name*" required />
                 <input type="email" name="email" placeholder="Email*" required />
 
-                <input type="number" name="adultGuests" placeholder="Number of Adult Guests*" required min="0">
-                <input type="number" name="childGuests" placeholder="Number of Child Guests (ages 4–10)*" required min="0">
+                <input type="number" name="adultGuests" placeholder="Number of Adult Guests*" min="0" required />
+                <input type="number" name="childGuests" placeholder="Number of Child Guests*" min="0" required />
 
                 <label class="checkbox">
                     <input type="checkbox" required />
@@ -152,49 +168,48 @@
             <div id="buffetMessage" class="form-message"></div>
         </section>
 
-        <!-- ADDITIONAL DINING INFO -->
-        <section class="buffet-info-section">
-            <h2>Additional Dining Information</h2>
-            <p>
-                This dinner is completely optional, and there’s absolutely no expectation of participating...
-                <br><br>
-                Venmo: <strong>@joekicko22</strong> (please confirm before sending!)
-            </p>
-        </section>
-
-        <!-- LATE NIGHT FESTIVITIES -->
-        <section class="late-night-section">
-            <h2>Late Night Festivities</h2>
-            <p>
-                The celebration continues into a vibrant night of unforgettable experiences...
-            </p>
-
-            <div class="late-night-video">
-                <iframe src="https://www.youtube.com/embed/MLaGFjfmn4g?rel=0&mute=0" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <!-- SECOND VIDEO -->
-        <section class="video-section">
-            <iframe src="https://www.youtube.com/embed/iRJWMhpmydU?rel=0&mute=0" allowfullscreen></iframe>
-        </section>
-
-        <!-- ACCOMMODATIONS & ACTIVITIES -->
-        <section class="accommodations-section">
-            <h2>Accommodations & Activities</h2>
-            <p>
-                Guests are welcome to stay at any hotel that best suits their style and preferences...
-            </p>
-        </section>
-
         <!-- MAP -->
         <section class="map-section">
             <h2>Location</h2>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18..."></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.303066551512!2d-115.17666022364946!3d36.11654597244383..."
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
         </section>
 
-    </div> <!-- END MAIN CONTENT -->
+        <!-- VIDEO -->
+        <section class="video-section">
+            <iframe
+                src="https://www.youtube.com/embed/iRJWMhpmydU"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        </section>
 
+        <!-- LATE NIGHT FESTIVITIES -->
+        <section class="late-night">
+            <h2>Late Night Festivities</h2>
+            <p>...</p>
+
+            <div class="late-night-video">
+                <iframe 
+                    src="https://www.youtube.com/embed/MLaGFjfmn4g" 
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- ACCOMMODATIONS -->
+        <section class="accommodations-section">
+            <h2>Accommodations & Activities</h2>
+            <p>...</p>
+        </section>
+
+    </div><!-- END BODY-BACKGROUND -->
+
+    <!-- FOOTER -->
     <footer>
         <p>Joseph & Shelby · September 16, 2026</p>
     </footer>
