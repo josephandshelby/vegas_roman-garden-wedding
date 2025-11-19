@@ -148,6 +148,11 @@ body {
     line-height: 1.5;
 }
 
+/* Make only the wedding date larger */
+.big-date {
+    font-size: 2rem;
+}
+
 /* ---------- SCHEDULE ---------- */
 .schedule ul {
     list-style: none;
@@ -363,4 +368,5 @@ footer {
         text-align: center;
     }
 }
+
 
