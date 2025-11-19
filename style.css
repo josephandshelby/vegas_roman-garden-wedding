@@ -112,7 +112,7 @@ body {
 
 .schedule li span {
     font-weight: bold;
-    color: #A8BBA1;
+     color: #5F7B5A;   /* darker natural green */
 }
 
 /* ---------- FORMS ---------- */
@@ -210,6 +210,7 @@ footer {
     font-size: 1rem;
     color: #444;
 }
+
 
 
 
