@@ -186,6 +186,14 @@ button {
     border: none;
 }
 
+/* ---------- LATE NIGHT VIDEO ---------- */
+.late-night-video iframe {
+    width: 90%;
+    height: 500px;
+    border: none;
+    margin-top: 20px;
+}
+
 /* ---------- BUFFET TEXT ---------- */
 .buffet-info-section {
     background: rgba(255, 255, 255, 0.85);
@@ -327,3 +335,4 @@ footer {
         text-align: center;
     }
 }
+
