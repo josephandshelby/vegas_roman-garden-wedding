@@ -168,19 +168,21 @@
             <p>Cost: <strong>$150 for Adults</strong>, <strong>$85 for Children (ages 4-10)</strong></p>
 
             <form id="buffetForm">
-                <input type="text" name="name" placeholder="Full Name*" required />
-                <input type="email" name="email" placeholder="Email*" required />
-                <input type="number" name="buffetGuests" placeholder="Number of Buffet Guests*" min="0" required />
-                
-                <label class="checkbox">
-                    <input type="checkbox" required />
-                    I acknowledge the buffet cost.
-                </label>
+    <input type="text" name="name" placeholder="Full Name*" required />
+    <input type="email" name="email" placeholder="Email*" required />
 
-                <button type="submit">Submit Buffet RSVP</button>
-            </form>
+    <input type="number" name="adultGuests" placeholder="Number of Adult Guests*" min="0" required />
+    <input type="number" name="childGuests" placeholder="Number of Child Guests (ages 4–10)*" min="0" required />
 
-            <div id="buffetMessage" class="form-message"></div>
+    <label class="checkbox">
+        <input type="checkbox" required />
+        I acknowledge the buffet cost.
+    </label>
+
+    <button type="submit">Submit Buffet RSVP</button>
+</form>
+<div id="buffetMessage" class="form-message"></div>
+
         </section>
 
        <!-- OPTIONAL DINING REMINDER TEXT SECTION -->
@@ -273,6 +275,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
