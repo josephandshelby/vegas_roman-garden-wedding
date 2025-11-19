@@ -174,34 +174,46 @@ button {
     border-radius: 10px;
 }
 
-/* All gallery images */
+/* All images */
 .buffet-gallery img {
     width: 100%;
-    height: auto;          /* makes images scale naturally */
     object-fit: cover;
     border-radius: 8px;
 }
 
-/* Full-width top image */
+/* Full-width top image (buffet1) */
 .buffet-full img {
-    width: 100%;           /* stays within the white box */
+    width: 100%;
+    height: 400px;      /* adjust this if you want taller */
     margin-bottom: 20px;
 }
 
-/* Rows of two images */
+/* Centered single image (buffet3) */
+.buffet-single {
+    text-align: center;
+}
+
+.buffet-single img {
+    width: 70%;         /* centered and not full width */
+    height: 350px;
+    display: block;
+    margin: 0 auto 20px auto;
+    object-fit: cover;
+}
+
+/* Two side-by-side images INSIDE the white box */
 .buffet-row {
     display: flex;
-    justify-content: space-between;
     gap: 20px;
     margin-bottom: 20px;
 }
 
 .buffet-row img {
-    width: 50%;           /* EXACT half width */
-    height: 300px;        /* consistent height for pairs */
-    object-fit: cover;    /* clean cropping */
-    border-radius: 8px;
+    flex: 1;
+    height: 300px;
+    object-fit: cover;
 }
+
 
 /* ---------- FOOTER ---------- */
 footer {
@@ -210,6 +222,7 @@ footer {
     font-size: 1rem;
     color: #444;
 }
+
 
 
 
