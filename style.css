@@ -53,7 +53,7 @@ body {
 .slideshow-track img {
     width: 100%;
     flex-shrink: 0;    /* prevents multiple images showing */
-    height: 600px;
+    height: 700px;
     object-fit: cover;
 }
 
@@ -162,5 +162,6 @@ footer {
     font-size: 1rem;
     color: #444;
 }
+
 
 
