@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /******************************************************
-     * ENGAGEMENT PHOTO SLIDESHOW (UNCHANGED)
+     * ENGAGEMENT PHOTO SLIDESHOW
      ******************************************************/
     const track = document.querySelector(".slideshow-track");
     const nextButton = document.querySelector(".arrow-right");
@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         track.addEventListener("transitionend", () => {
-            const current = slides[index];
+            const currentSlide = slides[index];
 
-            if (current.id === "first-clone") {
+            if (currentSlide.id === "first-clone") {
                 track.style.transition = "none";
                 index = 1;
                 track.style.transform = `translateX(${-slideWidth * index}px)`;
             }
 
-            if (current.id === "last-clone") {
+            if (currentSlide.id === "last-clone") {
                 track.style.transition = "none";
                 index = slides.length - 2;
                 track.style.transform = `translateX(${-slideWidth * index}px)`;
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /******************************************************
-     * GOOGLE SCRIPT WEB APP URLS (UPDATED)
+     * GOOGLE SCRIPT WEB APP URLS
      ******************************************************/
     const WEDDING_SCRIPT_URL =
         "https://script.google.com/macros/s/AKfycbzkrKRLMpxV1C8DdGnLGR8Wtr8e4AdVq8dW2qNkQhTsROHPUyDw6GDWfO9JNbtMzzw1/exec";
@@ -104,10 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://script.google.com/macros/s/AKfycbzsmlIoturA-HXxD7lxnENtTqB6kOf4RgY3esgmjcba9uRdn1w0-mvwwuo16RQ1kNqhWg/exec";
 
     /******************************************************
-     * FORM SUBMIT HELPER
+     * GENERIC FORM SUBMISSION HANDLER
      ******************************************************/
     async function submitForm(data, messageBox, url, resetCallback) {
-
         try {
             const response = await fetch(url, {
                 method: "POST",
@@ -117,8 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const result = await response.json();
 
             if (result.result === "success") {
-                messageBox.textContent =
-                    `Thank you, ${data.name || "Guest"}! Your RSVP has been recorded.`;
+                messageBox.textContent = `Thank you, ${data.name || "Guest"}! Your RSVP has been recorded.`;
             } else {
                 messageBox.textContent = "There was a problem submitting your RSVP.";
             }
@@ -158,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /******************************************************
-     * BUFFET FORM — UPDATED FOR ADULT + CHILD GUESTS
+     * BUFFET FORM (ADULT + CHILD GUESTS)
      ******************************************************/
     const buffetForm = document.getElementById("buffetForm");
     const buffetMessage = document.getElementById("buffetMessage");
@@ -167,10 +165,10 @@ document.addEventListener("DOMContentLoaded", () => {
         buffetForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const formData = new FormData(buffetForm);
-            const data = Object.fromEntries(formData.entries());
+            // Collect form entries
+            const data = Object.fromEntries(new FormData(buffetForm).entries());
 
-            // Add checkbox acknowledgment value
+            // Add checkbox acknowledgement
             const check = buffetForm.querySelector("input[type='checkbox']");
             data.acknowledgedFee = check?.checked ? "Yes" : "No";
 
