@@ -35,15 +35,25 @@ body {
     position: relative;
     text-align: center;
     background: rgba(255, 255, 255, 0.70);
-    padding: 55px 80px;       /* larger box */
-    border-radius: 14px;
-    max-width: 90%;           /* wider box */
+    padding: 55px 75px;
+    border-radius: 12px;
+    max-width: 85%;
 }
 
-.hero h1, .hero h2, .hero p {
+/* Hero font — Cinzel for the Roman look */
+.hero h1,
+.hero h2 {
+    font-family: "Cinzel", serif;
     color: #000;
     margin: 0.5em 0;
-    font-family: "Pinyon Script", cursive; /* cursive font */
+    letter-spacing: 1px;
+}
+
+.hero p {
+    font-size: 1.7rem;
+    font-family: "Cormorant Garamond", serif;
+    color: #000;
+    margin: 0.5em 0;
 }
 
 .hero h1 {
@@ -368,5 +378,6 @@ footer {
         text-align: center;
     }
 }
+
 
 
