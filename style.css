@@ -188,10 +188,13 @@ button {
 
 /* ---------- LATE NIGHT VIDEO ---------- */
 .late-night-video iframe {
-    width: 90%;
-    height: 500px;
+    width: 100%;
+    max-width: 900px;   /* large, centered video */
+    height: 700px;      /* much taller video */
     border: none;
-    margin-top: 20px;
+    display: block;
+    margin: 30px auto 0 auto; /* centers it beautifully */
+    border-radius: 12px;      /* optional: matches your white-box style */
 }
 
 /* ---------- BUFFET TEXT ---------- */
@@ -335,4 +338,5 @@ footer {
         text-align: center;
     }
 }
+
 
