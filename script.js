@@ -101,10 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://script.google.com/macros/s/AKfycbzkrKRLMpxV1C8DdGnLGR8Wtr8e4AdVq8dW2qNkQhTsROHPUyDw6GDWfO9JNbtMzzw1/exec";
 
     const BUFFET_SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbxKADngM8LYDCGs5Nc6CJXlaSJhTjVPlWm6Sdol0Nv0Luw8z9jBFiz5NvXeBn0TIzAklQ/exec";
+        "https://script.google.com/macros/s/AKfycbzsmlIoturA-HXxD7lxnENtTqB6kOf4RgY3esgmjcba9uRdn1w0-mvwwuo16RQ1kNqhWg/exec";
 
     /******************************************************
-     * FORM SUBMISSION HANDLER
+     * FORM SUBMIT HELPER
      ******************************************************/
     async function submitForm(data, messageBox, url, resetCallback) {
 
@@ -122,11 +122,13 @@ document.addEventListener("DOMContentLoaded", () => {
             } else {
                 messageBox.textContent = "There was a problem submitting your RSVP.";
             }
+
         } catch (err) {
             messageBox.textContent = "Unable to connect. Please try again.";
         }
 
         messageBox.style.opacity = 1;
+
         resetCallback();
 
         setTimeout(() => {
@@ -144,15 +146,19 @@ document.addEventListener("DOMContentLoaded", () => {
         weddingForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const formData = new FormData(weddingForm);
-            const data = Object.fromEntries(formData.entries());
+            const data = Object.fromEntries(new FormData(weddingForm).entries());
 
-            submitForm(data, weddingMessage, WEDDING_SCRIPT_URL, () => weddingForm.reset());
+            submitForm(
+                data,
+                weddingMessage,
+                WEDDING_SCRIPT_URL,
+                () => weddingForm.reset()
+            );
         });
     }
 
     /******************************************************
-     * BUFFET FORM
+     * BUFFET FORM — UPDATED FOR ADULT + CHILD GUESTS
      ******************************************************/
     const buffetForm = document.getElementById("buffetForm");
     const buffetMessage = document.getElementById("buffetMessage");
@@ -164,11 +170,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const formData = new FormData(buffetForm);
             const data = Object.fromEntries(formData.entries());
 
-            // attach checkbox value
+            // Add checkbox acknowledgment value
             const check = buffetForm.querySelector("input[type='checkbox']");
             data.acknowledgedFee = check?.checked ? "Yes" : "No";
 
-            submitForm(data, buffetMessage, BUFFET_SCRIPT_URL, () => buffetForm.reset());
+            submitForm(
+                data,
+                buffetMessage,
+                BUFFET_SCRIPT_URL,
+                () => buffetForm.reset()
+            );
         });
     }
 
