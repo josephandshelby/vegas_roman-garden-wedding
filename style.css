@@ -1,3 +1,6 @@
+/* ---------- IMPORT FONTS ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 /* ---------- GLOBAL ---------- */
 body {
     margin: 0;
@@ -31,15 +34,28 @@ body {
 .hero-content {
     position: relative;
     text-align: center;
-    background: rgba(255, 255, 255, 0.65);
-    padding: 40px 60px;
-    border-radius: 10px;
-    max-width: 80%;
+    background: rgba(255, 255, 255, 0.70);
+    padding: 55px 80px;       /* larger box */
+    border-radius: 14px;
+    max-width: 90%;           /* wider box */
 }
 
 .hero h1, .hero h2, .hero p {
     color: #000;
     margin: 0.5em 0;
+    font-family: "Great Vibes", cursive; /* cursive font */
+}
+
+.hero h1 {
+    font-size: 4rem;          /* larger */
+}
+
+.hero h2 {
+    font-size: 2.4rem;
+}
+
+.hero p {
+    font-size: 1.7rem;
 }
 
 /* ---------- SLIDESHOW SECTION ---------- */
@@ -186,15 +202,15 @@ button {
     border: none;
 }
 
-/* ---------- LATE NIGHT VIDEO ---------- */
+/* ---------- LATE NIGHT VIDEO (BIGGER) ---------- */
 .late-night-video iframe {
     width: 100%;
-    max-width: 900px;   /* large, centered video */
-    height: 700px;      /* much taller video */
+    max-width: 900px;
+    height: 700px;
     border: none;
     display: block;
-    margin: 30px auto 0 auto; /* centers it beautifully */
-    border-radius: 12px;      /* optional: matches your white-box style */
+    margin: 30px auto 0 auto;
+    border-radius: 12px;
 }
 
 /* ---------- BUFFET TEXT ---------- */
@@ -284,16 +300,20 @@ footer {
     }
 
     .hero-content {
-        padding: 20px;
-        max-width: 90%;
+        padding: 35px 40px;
+        max-width: 95%;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .hero h2 {
-        font-size: 1.3rem;
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.4rem;
     }
 
     .slideshow-track img {
@@ -303,6 +323,11 @@ footer {
 
     .arrow {
         font-size: 2rem;
+    }
+
+    .late-night-video iframe {
+        width: 100%;
+        height: 450px;
     }
 
     .buffet-full img,
@@ -338,5 +363,3 @@ footer {
         text-align: center;
     }
 }
-
-
