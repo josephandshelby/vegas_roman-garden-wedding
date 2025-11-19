@@ -399,4 +399,42 @@ footer {
         text-align: center;
     }
 }
+/* ============================================================
+   FIX: Restore Cinzel to hero title + Increase section text sizes
+   ============================================================ */
+
+/* Restore Cinzel — this must be imported */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
+/* Restore Cinzel to hero headings */
+.hero h1,
+.hero h2 {
+    font-family: "Cinzel", serif !important;
+}
+
+/* Make ALL section titles larger */
+.about h2,
+.details h3,
+.schedule h2,
+.form-section h2,
+.buffet-info-section h2,
+.buffet-gallery h2,
+.late-night h2,
+.accommodations-section h2 {
+    font-size: 2.6rem !important;
+}
+
+/* Make ALL section body text larger */
+.about p,
+.details p,
+.schedule ul li,
+.form-section p,
+.buffet-info-section p,
+.buffet-gallery p,
+.late-night p,
+.accommodations-section p {
+    font-size: 1.55rem !important;
+    line-height: 1.65;
+}
+
 
