@@ -5,6 +5,7 @@ body {
     font-family: "Cormorant Garamond", serif;
     color: #333;
     background: #F7F7F7;
+    font-size: 1.25rem; /* Increased global text size */
 }
 
 /* ---------- HERO ---------- */
@@ -52,7 +53,7 @@ body {
 .slideshow-track img {
     width: 100%;
     flex-shrink: 0;    /* prevents multiple images showing */
-    height: 400px;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -161,3 +162,4 @@ footer {
     font-size: 1rem;
     color: #444;
 }
+
