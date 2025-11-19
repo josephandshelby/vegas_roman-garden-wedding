@@ -57,7 +57,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 4rem;          /* larger */
+    font-size: 4rem;
 }
 
 .hero h2 {
@@ -117,8 +117,6 @@ body {
     font-size: 3rem;
     color: rgba(0,0,0,0.6);
     cursor: pointer;
-
-    /* force arrows above everything */
     z-index: 9999 !important;
 }
 
@@ -135,7 +133,7 @@ body {
     text-align: center;
 }
 
-/* FIX: Remove white line above first section */
+/* Remove white line above first section */
 .about {
     margin-top: 0 !important;
 }
@@ -217,7 +215,7 @@ button {
     border: none;
 }
 
-/* ---------- LATE NIGHT VIDEO (BIGGER) ---------- */
+/* ---------- LATE NIGHT VIDEO ---------- */
 .late-night-video iframe {
     width: 100%;
     max-width: 900px;
@@ -292,6 +290,29 @@ footer {
     padding: 30px 20px;
     font-size: 1rem;
     color: #444;
+}
+
+/* ============================================================
+   ✨ TEXT SIZE UPGRADES FOR ALL MAJOR SECTIONS
+   ============================================================ */
+
+.about h2,
+.details h3,
+.schedule h2,
+.buffet-info-section h2,
+.additional-dining h2,
+.late-night-section h2 {
+    font-size: 2.4rem !important;
+}
+
+.about p,
+.detail-item p,
+.schedule li,
+.buffet-info-section p,
+.additional-dining p,
+.late-night-section p {
+    font-size: 1.45rem !important;
+    line-height: 1.6;
 }
 
 /* ---------- MOBILE OPTIMIZATION ---------- */
@@ -378,6 +399,3 @@ footer {
         text-align: center;
     }
 }
-
-
-
