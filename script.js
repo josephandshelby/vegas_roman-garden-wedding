@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     /******************************************************
-     * ENGAGEMENT PHOTO SLIDESHOW
+     * ENGAGEMENT PHOTO SLIDESHOW (UNCHANGED)
      ******************************************************/
     const track = document.querySelector(".slideshow-track");
     const nextButton = document.querySelector(".arrow-right");
@@ -43,15 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         track.addEventListener("transitionend", () => {
-            const currentSlide = slides[index];
+            const current = slides[index];
 
-            if (currentSlide.id === "first-clone") {
+            if (current.id === "first-clone") {
                 track.style.transition = "none";
                 index = 1;
                 track.style.transform = `translateX(${-slideWidth * index}px)`;
             }
 
-            if (currentSlide.id === "last-clone") {
+            if (current.id === "last-clone") {
                 track.style.transition = "none";
                 index = slides.length - 2;
                 track.style.transform = `translateX(${-slideWidth * index}px)`;
@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /******************************************************
-     * GOOGLE SCRIPT WEB APP URLS
+     * GOOGLE SCRIPT WEB APP URLS (UPDATED)
      ******************************************************/
     const WEDDING_SCRIPT_URL =
         "https://script.google.com/macros/s/AKfycbzkrKRLMpxV1C8DdGnLGR8Wtr8e4AdVq8dW2qNkQhTsROHPUyDw6GDWfO9JNbtMzzw1/exec";
@@ -104,9 +104,10 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://script.google.com/macros/s/AKfycbzsmlIoturA-HXxD7lxnENtTqB6kOf4RgY3esgmjcba9uRdn1w0-mvwwuo16RQ1kNqhWg/exec";
 
     /******************************************************
-     * GENERIC FORM SUBMISSION HANDLER
+     * FORM SUBMIT HELPER
      ******************************************************/
     async function submitForm(data, messageBox, url, resetCallback) {
+
         try {
             const response = await fetch(url, {
                 method: "POST",
@@ -116,7 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const result = await response.json();
 
             if (result.result === "success") {
-                messageBox.textContent = `Thank you, ${data.name || "Guest"}! Your RSVP has been recorded.`;
+                messageBox.textContent =
+                    `Thank you, ${data.name || "Guest"}! Your RSVP has been recorded.`;
             } else {
                 messageBox.textContent = "There was a problem submitting your RSVP.";
             }
@@ -144,7 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
         weddingForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const data = Object.fromEntries(new FormData(weddingForm).entries());
+            const formData = new FormData(weddingForm);
+            const data = Object.fromEntries(formData.entries());
 
             submitForm(
                 data,
@@ -156,7 +159,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /******************************************************
-     * BUFFET FORM (ADULT + CHILD GUESTS)
+     * BUFFET FORM
      ******************************************************/
     const buffetForm = document.getElementById("buffetForm");
     const buffetMessage = document.getElementById("buffetMessage");
@@ -165,12 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
         buffetForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            // Collect form entries
-            const data = Object.fromEntries(new FormData(buffetForm).entries());
+            const formData = new FormData(buffetForm);
 
-            // Add checkbox acknowledgement
-            const check = buffetForm.querySelector("input[type='checkbox']");
-            data.acknowledgedFee = check?.checked ? "Yes" : "No";
+            const data = Object.fromEntries(formData.entries());
 
             submitForm(
                 data,
@@ -178,6 +178,17 @@ document.addEventListener("DOMContentLoaded", () => {
                 BUFFET_SCRIPT_URL,
                 () => buffetForm.reset()
             );
+        });
+    }
+
+    /******************************************************
+     *  ✨ VEGAS INTRO OVERLAY (OPTION A — SIMPLE SCROLL)
+     ******************************************************/
+    const intro = document.getElementById("vegas-intro");
+
+    if (intro) {
+        intro.addEventListener("click", () => {
+            intro.style.display = "none";
         });
     }
 
