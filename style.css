@@ -226,6 +226,16 @@ button {
     border-radius: 12px;
 }
 
+/* ---------- ACCOMMODATIONS & ACTIVITIES ---------- */
+.accommodations-section h2 {
+    font-size: 2.4rem;
+}
+
+.accommodations-section p {
+    font-size: 1.45rem;
+    line-height: 1.6;
+}
+
 /* ---------- BUFFET TEXT ---------- */
 .buffet-info-section {
     background: rgba(255, 255, 255, 0.85);
@@ -399,3 +409,4 @@ footer {
         text-align: center;
     }
 }
+
