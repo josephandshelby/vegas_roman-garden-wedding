@@ -57,7 +57,7 @@
         </div>
     </div>
 </section>
-
+    <!-- BODY CONTENT WITH WHITE SECTIONS -->
     <div class="body-background">
 
         <!-- ABOUT / OUR STORY SECTION -->
@@ -98,19 +98,20 @@
             </div>
         </section>
 
-        <!-- SCHEDULE SECTION -->
-<section class="schedule">
-    <h2>Itinerary</h2>
-    <ul>
-        <li><span>5:00 PM</span> — Arrival at Ceremony Venue</li>
-        <li><span>5:30 PM</span> — Ceremony</li>
-        <li><span>6:00 PM</span> — Bridal Party Photos</li>
-        <li><span>7:15 PM</span> — Optional Buffet Dinner</li>
-        <li><span>10:00 PM</span> — Party on the Strip</li>
-    </ul>
-</section>
+         <!-- ITINERARY SECTION -->
+        <section class="schedule">
+            <h2>Itinerary</h2>
+            <ul>
+                <li><span>5:00 PM</span> — Arrival at Ceremony Venue</li>
+                <li><span>5:30 PM</span> — Ceremony</li>
+                <li><span>6:00 PM</span> — Bridal Party Photos</li>
+                <li><span>7:15 PM</span> — Optional Buffet Dinner</li>
+                <li><span>10:00 PM</span> — Party on the Strip</li>
+            </ul>
+        </section>
 
-        <!-- WEDDING RSVP FORM -->
+
+       <!-- WEDDING RSVP FORM -->
         <section class="form-section">
             <h2>Wedding RSVP</h2>
             <form id="weddingForm">
@@ -127,87 +128,150 @@
             <div id="weddingMessage" class="form-message"></div>
         </section>
 
-<!-- DINING EXPERIENCE -->
+ <!-- DINING EXPERIENCE SECTION -->
 <section class="buffet-info-section">
     <h2>Dining Experience</h2>
     <p>
-        After the ceremony, we invite you to continue the celebration with an unforgettable culinary experience 
-        at the renowned Bacchanal Buffet at Caesars Palace...
+        After the ceremony, we invite you to continue the celebration with an unforgettable culinary experience
+        at the renowned Bacchanal Buffet at Caesars Palace. The Bacchanal Buffet presents a distinguished dining
+        experience defined by indulgence and exceptional culinary artistry. Featuring an expansive array of globally
+        inspired dishes, each prepared in open kitchens, guests are invited to savor premium seafood, expertly carved
+        meats, handcrafted desserts, and exquisite seasonal offerings all thoughtfully curated to highlight both flavor
+        and presentation.
+        <br><br>
+        Every station reflects meticulous attention to detail, creating an atmosphere of sophistication and warmth.
+        Dining at the Bacchanal Buffet becomes a celebratory journey through carefully crafted cuisine, embodying
+        the elegance and allure that make Las Vegas truly unforgettable. Each moment invites you to revel in the luxury,
+        surrounded by exceptional flavors and impeccable presentation.
     </p>
 </section>
 
-<!-- BUFFET PHOTO GALLERY -->
-<section class="buffet-gallery">
-    <div class="buffet-full"><img src="buffet1.jpg"></div>
-    <div class="buffet-single"><img src="buffet3.jpg"></div>
-    <div class="buffet-row">
-        <img src="buffet4.jpg">
-        <img src="buffet2.jpg">
-    </div>
+
+        <!-- BUFFET PHOTO GALLERY -->
+        <section class="buffet-gallery">
+
+            <!-- FULL-WIDTH TOP IMAGE -->
+            <div class="buffet-full">
+                <img src="buffet1.jpg" alt="Buffet photo 1">
+            </div>
+
+            <!-- CENTERED SINGLE IMAGE -->
+            <div class="buffet-single">
+                <img src="buffet3.jpg" alt="Buffet photo 3">
+            </div>
+
+            <!-- TWO SIDE-BY-SIDE IMAGES -->
+            <div class="buffet-row">
+                <img src="buffet4.jpg" alt="Buffet photo 4">
+                <img src="buffet2.jpg" alt="Buffet photo 2">
+            </div>
 </section>
 
         
-        <!-- BUFFET RSVP -->
+          <!-- BUFFET RSVP -->
         <section class="form-section buffet">
             <h2>Buffet RSVP — Optional</h2>
-            <p>Cost: <strong>$150 for Adults</strong>, <strong>$85 for Children</strong></p>
+            <p>Cost: <strong>$150 for Adults</strong>, <strong>$85 for Children (ages 4-10)</strong></p>
+
             <form id="buffetForm">
-                <input type="text" name="name" placeholder="Full Name*" required />
-                <input type="email" name="email" placeholder="Email*" required />
+    <input type="text" name="name" placeholder="Full Name*" required />
+    <input type="email" name="email" placeholder="Email*" required />
 
-                <input type="number" name="adultGuests" placeholder="Number of Adult Guests*" min="0" required />
-                <input type="number" name="childGuests" placeholder="Number of Child Guests*" min="0" required />
+    <input type="number" name="adultGuests" placeholder="Number of Adult Guests*" min="0" required />
+    <input type="number" name="childGuests" placeholder="Number of Child Guests (ages 4–10)*" min="0" required />
 
-                <label class="checkbox">
-                    <input type="checkbox" required />
-                    I acknowledge the buffet cost.
-                </label>
+    <label class="checkbox">
+        <input type="checkbox" required />
+        I acknowledge the buffet cost.
+    </label>
 
-                <button type="submit">Submit Buffet RSVP</button>
-            </form>
-            <div id="buffetMessage" class="form-message"></div>
+    <button type="submit">Submit Buffet RSVP</button>
+</form>
+<div id="buffetMessage" class="form-message"></div>
+
         </section>
 
-        <!-- MAP -->
+<!-- OPTIONAL DINING REMINDER TEXT SECTION -->
+<section class="buffet-info-section">
+    <h2>Additional Dining Information</h2>
+    <p>
+        This dinner is completely optional, and there’s absolutely no expectation of participating,
+        your comfort is what matters most to us. If you and your guests wish to extend the festivities
+        over a beautifully curated buffet experience, we would be honored to have you join us.
+        <br><br>
+        Should you decide to join, simply fill out the RSVP form above and send the dining fee to the
+        Venmo account listed below. Take your time and only move forward if it fits your plans.
+        We’re grateful for everyone who celebrates with us in whatever way feels right for them.
+        <br><br>
+        Please note that if you would like to attend the buffet with the group, please submit your
+        RSVP form and fee before <strong>January 31st, 2026</strong>. This ensures our group can
+        secure a private dining area and that we can all be seated together.
+    </p>
+
+    <p><strong>Venmo: @joekicko22</strong> (please confirm before sending!)</p>
+</section>
+
+       <!-- LATE NIGHT FESTIVITIES SECTION -->
+<section class="buffet-info-section">
+    <h2>Late Night Festivities</h2>
+    <p>
+        The celebration continues into a vibrant night of unforgettable experiences. Beginning around 10 pm,
+        we invite you to join us as the festivities continue in true Las Vegas fashion. Our first stop will be
+        the electrifying OMNIA Nightclub at Caesars Palace, where world-class music, vibrant energy, and
+        unforgettable ambiance set the tone for the night ahead.
+        <br><br>
+        From there, we’ll venture out to explore the iconic Las Vegas Strip, taking in its dazzling lights,
+        famous landmarks, and historic sights. Whether you’re ready to dance, explore, or simply soak in the
+        city’s magic, we can’t wait to share this unforgettable evening with you.
+    </p>
+
+    <!-- YOUTUBE VIDEO -->
+    <div class="late-night-video">
+        <iframe
+            src="https://www.youtube.com/embed/MLaGFjfmn4g?mute=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section">
+    <iframe
+        src="https://www.youtube.com/embed/iRJWMhpmydU?mute=0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<!-- ACCOMMODATIONS & ACTIVITIES -->
+<section class="accommodations-section">
+    <h2>Accommodations & Activities</h2>
+    <p>
+        Guests are welcome to stay at any hotel that best suits their style and preferences. However, we recommend choosing a location on the Las Vegas Strip to enjoy the full experience the city has to offer. Since most of our wedding festivities will take place at Caesars Palace, staying nearby may be the most convenient option for your visit.
+    </p>
+    <p>
+        Las Vegas is filled with unforgettable things to see and do. From the iconic Bellagio fountains and world-class magic shows to artist residencies, immersive performances, fine dining, and breathtaking attractions, there’s truly something for everyone to enjoy. Whether you’re looking for entertainment, relaxation, adventure, or a bit of classic Vegas spectacle, the city has it all.
+    </p>
+    <p>
+        If you’d like to plan a specific activity with us during your stay, please feel free to reach out, we’d love to share even more memories with you while you're in town.
+    </p>
+</section>
+
+<!-- MAP SECTION -->
         <section class="map-section">
             <h2>Location</h2>
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.303066551512!2d-115.17666022364946!3d36.11654597244383..."
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3223.303066551512!2d-115.17666022364946!3d36.11654597244383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c42b1b582d51%3A0xecd8f2fa2a3434a4!2sCaesars%20Palace!5e0!3m2!1sen!2sus!4v1709333500000"
                 loading="lazy"
                 allowfullscreen>
             </iframe>
         </section>
 
-        <!-- VIDEO -->
-        <section class="video-section">
-            <iframe
-                src="https://www.youtube.com/embed/iRJWMhpmydU"
-                frameborder="0"
-                allowfullscreen>
-            </iframe>
-        </section>
 
-        <!-- LATE NIGHT FESTIVITIES -->
-        <section class="late-night">
-            <h2>Late Night Festivities</h2>
-            <p>...</p>
-
-            <div class="late-night-video">
-                <iframe 
-                    src="https://www.youtube.com/embed/MLaGFjfmn4g" 
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-
-        <!-- ACCOMMODATIONS -->
-        <section class="accommodations-section">
-            <h2>Accommodations & Activities</h2>
-            <p>...</p>
-        </section>
-
-    </div><!-- END BODY-BACKGROUND -->
+    </div> <!-- END body-background -->
 
     <!-- FOOTER -->
     <footer>
