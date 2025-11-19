@@ -60,6 +60,7 @@ body {
     position: relative;
     width: 100%;
     overflow: hidden;
+    z-index: 1;
 }
 
 .slideshow-track {
@@ -67,7 +68,6 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Engagement photo slides */
 .slideshow-track img {
     width: 100%;
     height: auto;
@@ -77,11 +77,13 @@ body {
     background: #fff;
     border-radius: 10px;
 
-    /* critical for slideshow JS */
     flex-shrink: 0;
+
+    position: relative;
+    z-index: 1;
 }
 
-/* Slideshow arrows */
+/* Slideshow arrows — fix click issue */
 .arrow {
     position: absolute;
     top: 50%;
@@ -89,7 +91,9 @@ body {
     font-size: 3rem;
     color: rgba(0,0,0,0.6);
     cursor: pointer;
-    z-index: 10;
+
+    /* force arrows above everything */
+    z-index: 9999 !important;
 }
 
 .arrow-left { left: 10px; }
@@ -103,6 +107,11 @@ body {
     border-radius: 10px;
     max-width: 1000px;
     text-align: center;
+}
+
+/* FIX: Remove white line above first section */
+.about {
+    margin-top: 0 !important;
 }
 
 /* ---------- DETAILS ---------- */
@@ -202,7 +211,7 @@ button {
     border-radius: 8px;
 }
 
-/* Top image (full width) */
+/* Top full-width image */
 .buffet-full img {
     width: 100%;
     height: 400px;
@@ -217,12 +226,12 @@ button {
 .buffet-single img {
     width: 70%;
     height: 350px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px;
     display: block;
     object-fit: cover;
 }
 
-/* 2-column row */
+/* Two image row */
 .buffet-row {
     display: flex;
     gap: 20px;
