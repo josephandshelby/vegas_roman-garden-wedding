@@ -1,33 +1,69 @@
 
 // script.js
 
+/*** SLIDESHOW ***/
 document.addEventListener("DOMContentLoaded", () => {
-    /*** SLIDESHOW ***/
     const track = document.querySelector(".slideshow-track");
     const slides = Array.from(track.children);
     const nextButton = document.querySelector(".arrow-right");
     const prevButton = document.querySelector(".arrow-left");
+
+    // CLONE first and last slides for seamless looping
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+
+    firstClone.id = "first-clone";
+    lastClone.id = "last-clone";
+
+    track.appendChild(firstClone);
+    track.insertBefore(lastClone, slides[0]);
+
+    const allSlides = Array.from(track.children);
+    let index = 1; // start at first REAL slide
+
     const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${slideWidth * index}px)`;
 
-    // Arrange slides next to each other
-    slides.forEach((slide, index) => {
-        slide.style.left = slideWidth * index + "px";
-    });
-
-    let currentIndex = 0;
-
-    const moveToSlide = (index) => {
-        if (index < 0) index = slides.length - 1;
-        if (index >= slides.length) index = 0;
+    const moveToSlide = () => {
+        track.style.transition = "transform 0.5s ease-in-out";
         track.style.transform = `translateX(-${slideWidth * index}px)`;
-        currentIndex = index;
     };
 
-    nextButton.addEventListener("click", () => moveToSlide(currentIndex + 1));
-    prevButton.addEventListener("click", () => moveToSlide(currentIndex - 1));
+    const handleTransitionEnd = () => {
+        const currentSlides = Array.from(track.children);
 
-    // Optional: auto-slide every 5 seconds
-    setInterval(() => moveToSlide(currentIndex + 1), 5000);
+        if (currentSlides[index].id === "first-clone") {
+            track.style.transition = "none";
+            index = 1;
+            track.style.transform = `translateX(-${slideWidth * index}px)`;
+        }
+
+        if (currentSlides[index].id === "last-clone") {
+            track.style.transition = "none";
+            index = currentSlides.length - 2;
+            track.style.transform = `translateX(-${slideWidth * index}px)`;
+        }
+    };
+
+    track.addEventListener("transitionend", handleTransitionEnd);
+
+    nextButton.addEventListener("click", () => {
+        index++;
+        moveToSlide();
+    });
+
+    prevButton.addEventListener("click", () => {
+        index--;
+        moveToSlide();
+    });
+
+    // Auto-slide
+    setInterval(() => {
+        index++;
+        moveToSlide();
+    }, 5000);
+});
+
 
     /*** RSVP FORM HANDLING ***/
     const weddingForm = document.getElementById("weddingForm");
@@ -56,3 +92,4 @@ document.addEventListener("DOMContentLoaded", () => {
     handleFormSubmit(weddingForm, weddingMessage);
     handleFormSubmit(buffetForm, buffetMessage);
 });
+
