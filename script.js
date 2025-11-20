@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://script.google.com/macros/s/AKfycbzkrKRLMpxV1C8DdGnLGR8Wtr8e4AdVq8dW2qNkQhTsROHPUyDw6GDWfO9JNbtMzzw1/exec";
 
     const BUFFET_SCRIPT_URL =
-        "https://script.google.com/macros/s/AKfycbzsmlIoturA-HXxD7lxnENtTqB6kOf4RgY3esgmjcba9uRdn1w0-mvwwuo16RQ1kNqhWg/exec";
+        "https://script.google.com/macros/s/AKfycbzyaY6YHNIEeRaNAkJH0vcAAvm785Z4gRoyXDnvQOD2bwqqNjYCZAVi7BW9W4gIx6_Byw/exec";
 
     /******************************************************
      * FORM SUBMIT HELPER
@@ -193,3 +193,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
