@@ -165,29 +165,48 @@
             </div>
 </section>
 
-        
-          <!-- BUFFET RSVP -->
-        <section class="form-section buffet">
-            <h2>Buffet RSVP — Optional</h2>
-            <p>Cost: <strong>$150 for Adults</strong>, <strong>$90 for Children (ages 4-10)</strong></p>
+<!-- BUFFET RSVP -->
+<section class="form-section buffet">
+    <h2>Buffet RSVP — Optional</h2>
 
-            <form id="buffetForm">
-    <input type="text" name="name" placeholder="Full Name*" required />
-    <input type="email" name="email" placeholder="Email*" required />
+    <p>
+        Cost: 
+        <strong>$150 for Adults</strong>, 
+        <strong>$90 for Children (ages 4–10)</strong>, 
+        and <strong>Optional unlimited alcohol package: $45</strong>
+    </p>
 
-    <input type="number" name="adultGuests" placeholder="Number of Adult Guests*" min="0" required />
-    <input type="number" name="childGuests" placeholder="Number of Child Guests (ages 4–10)*" min="0" required />
+    <form id="buffetForm">
+        <input type="text" name="name" placeholder="Full Name*" required />
+        <input type="email" name="email" placeholder="Email*" required />
 
-    <label class="checkbox">
-        <input type="checkbox" required />
-        I acknowledge the buffet cost.
-    </label>
+        <input type="number" name="adultGuests" placeholder="Number of Adult Guests*" min="0" required />
+        <input type="number" name="childGuests" placeholder="Number of Child Guests (ages 4–10)*" min="0" required />
 
-    <button type="submit">Submit Buffet RSVP</button>
-</form>
-<div id="buffetMessage" class="form-message"></div>
+        <!-- NEW: Alcohol Package Selection -->
+        <label class="radio-group-label"><strong>Would you like to purchase the Unlimited Alcohol Package?</strong></label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="alcoholPackage" value="yes" required />
+                Yes
+            </label>
+            <label>
+                <input type="radio" name="alcoholPackage" value="no" required />
+                No
+            </label>
+        </div>
 
-        </section>
+        <label class="checkbox">
+            <input type="checkbox" required />
+            I acknowledge the buffet cost.
+        </label>
+
+        <button type="submit">Submit Buffet RSVP</button>
+    </form>
+
+    <div id="buffetMessage" class="form-message"></div>
+</section>
+
 
 <!-- OPTIONAL DINING REMINDER TEXT SECTION -->
 <section class="buffet-info-section">
@@ -200,6 +219,11 @@
         Should you decide to join, simply fill out the RSVP form above and send the dining fee to the
         Venmo account listed below. Take your time and only move forward if it fits your plans.
         We’re grateful for everyone who celebrates with us in whatever way feels right for them.
+        <br><br>
+        To enjoy alcoholic beverages at the buffet, guests must purchase the 
+        <strong>Unlimited Alcohol Package</strong> in advance. Without this package, alcoholic drinks 
+        will not be available during the event. Refreshments such as water and soda are included as 
+        part of the dinner package.
         <br><br>
         Please note that if you would like to attend the buffet with the group, please submit your
         RSVP form and fee before <strong>January 31st, 2026</strong>. This ensures our group can
@@ -279,6 +303,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
