@@ -17,7 +17,7 @@
 
 /* ---------- IMPORT FONTS ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
 
 /* ---------- GLOBAL ---------- */
@@ -26,7 +26,6 @@ body {
     font-family: "Cormorant Garamond", serif;
     color: #333;
 
-    /* Full-page repeating background image */
     background: url('background-image.jpg') repeat;
     background-size: auto;
     background-attachment: fixed;
@@ -34,14 +33,14 @@ body {
     font-size: 1.25rem;
 }
 
-/* ⭐ UNIVERSAL HEADING RULE — ROMAN STYLE */
+/* ⭐ UNIVERSAL HEADING RULE — CINZEL DECORATIVE */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Cinzel", serif !important;
+    font-family: "Cinzel Decorative", serif !important;
 }
 
 /* ---------- HERO ---------- */
 .hero {
-    height: 80vh;
+    height: 90vh;
     background: url('venus_garden.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
@@ -71,13 +70,6 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 1px;
 }
 
-.hero p {
-    font-size: 1.7rem;
-    font-family: "Cormorant Garamond", serif;
-    color: #000;
-    margin: 0.5em 0;
-}
-
 .hero h1 {
     font-size: 4rem;
 }
@@ -88,6 +80,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero p {
     font-size: 1.7rem;
+    font-family: "Cormorant Garamond", serif;
+    color: #000;
+    margin: 0.5em 0;
 }
 
 /* ---------- SLIDESHOW SECTION ---------- */
@@ -95,7 +90,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 0;
 }
 
-/* White box around slideshow */
 .slideshow-container {
     max-width: 1000px;
     margin: 30px auto;
@@ -131,7 +125,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
-/* Slideshow arrows */
 .arrow {
     position: absolute;
     top: 50%;
@@ -155,7 +148,6 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-/* FIX: Remove white line above first section */
 .about {
     margin-top: 0 !important;
 }
@@ -178,7 +170,6 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
 }
 
-/* Make only the wedding date larger */
 .big-date {
     font-size: 2rem;
 }
@@ -273,14 +264,12 @@ button {
     border-radius: 8px;
 }
 
-/* Top full-width image */
 .buffet-full img {
     width: 100%;
     height: 400px;
     margin-bottom: 20px;
 }
 
-/* Centered single image */
 .buffet-single {
     text-align: center;
 }
@@ -293,7 +282,6 @@ button {
     object-fit: cover;
 }
 
-/* Two image row */
 .buffet-row {
     display: flex;
     gap: 20px;
@@ -398,7 +386,6 @@ footer {
         text-align: center;
     }
 
-    /* MOBILE FIX FOR VEGAS INTRO */
     #vegas-intro {
         height: auto !important;
     }
