@@ -18,16 +18,16 @@
 /* ---------- GLOBAL ---------- */
 body {
     margin: 0;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 400;          /* Makes text thicker & easier to read */
-    color: #222;               /* Slightly darker, better contrast */
+    font-family: Georgia, serif;   /* ✔ Paragraphs now use Georgia */
+    font-weight: 400;              /* ✔ Readable thickness */
+    color: #222;                   /* ✔ Better contrast */
     
     background: url('background-image.jpg') repeat;
     background-size: auto;
     background-attachment: fixed;
 
-    font-size: 1.45rem;        /* Keep your enlarged size */
-    line-height: 1.55;         /* Improves readability dramatically */
+    font-size: 1.40rem;            /* ✔ Increase readability */
+    line-height: 1.6;              /* ✔ Easier to read paragraphs */
 }
 
 /* ⭐ UNIVERSAL HEADING RULE — CINZEL DECORATIVE */
@@ -394,6 +394,7 @@ footer {
         display: block;
     }
 }
+
 
 
 
