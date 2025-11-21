@@ -26,7 +26,7 @@ body {
     background-size: auto;
     background-attachment: fixed;
 
-    font-size: 1.60rem;            /* ✔ Increase readability */
+    font-size: 1.50rem;            /* ✔ Increase readability */
     line-height: 1.6;              /* ✔ Easier to read paragraphs */
 }
 
@@ -303,7 +303,8 @@ footer {
 @media (max-width: 768px) {
 
     body {
-        font-size: 1rem;
+        font-size: 1.25rem;   /* UPDATED — larger mobile paragraph text */
+        line-height: 1.6;     /* Improves readability on small screens */
     }
 
     .body-background section,
@@ -367,7 +368,7 @@ footer {
     }
 
     .detail-item p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     .detail-item h3 {
@@ -394,10 +395,6 @@ footer {
         display: block;
     }
 }
-
-
-
-
 
 
 
