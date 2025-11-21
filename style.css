@@ -15,12 +15,10 @@
     display: block;
 }
 
-/* ===== END VEGAS INTRO STYLES ===== */
-
-
-
 /* ---------- IMPORT FONTS ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
 
 /* ---------- GLOBAL ---------- */
 body {
@@ -34,6 +32,11 @@ body {
     background-attachment: fixed;
 
     font-size: 1.25rem;
+}
+
+/* ⭐ UNIVERSAL HEADING RULE — ROMAN STYLE */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cinzel", serif !important;
 }
 
 /* ---------- HERO ---------- */
@@ -61,10 +64,8 @@ body {
     max-width: 85%;
 }
 
-/* Hero font — Cinzel for the Roman look */
 .hero h1,
 .hero h2 {
-    font-family: "Cinzel", serif;
     color: #000;
     margin: 0.5em 0;
     letter-spacing: 1px;
@@ -78,7 +79,7 @@ body {
 }
 
 .hero h1 {
-    font-size: 4rem;          /* larger */
+    font-size: 4rem;
 }
 
 .hero h2 {
@@ -130,16 +131,14 @@ body {
     z-index: 1;
 }
 
-/* Slideshow arrows — fix click issue */
+/* Slideshow arrows */
 .arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     font-size: 3rem;
-    color: #ffffff; /* <-- PURE WHITE ARROWS */
+    color: #ffffff;
     cursor: pointer;
-
-    /* force arrows above everything */
     z-index: 9999 !important;
 }
 
@@ -238,7 +237,7 @@ button {
     border: none;
 }
 
-/* ---------- LATE NIGHT VIDEO (BIGGER) ---------- */
+/* ---------- LATE NIGHT VIDEO ---------- */
 .late-night-video iframe {
     width: 100%;
     max-width: 900px;
@@ -398,56 +397,16 @@ footer {
     .schedule li {
         text-align: center;
     }
-}
-/* ============================================================
-   FIX: Restore Cinzel to hero title + Increase section text sizes
-   ============================================================ */
 
-/* Restore Cinzel — this must be imported */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
-
-/* Restore Cinzel to hero headings */
-.hero h1,
-.hero h2 {
-    font-family: "Cinzel", serif !important;
-}
-
-/* Make ALL section titles larger */
-.about h2,
-.details h3,
-.schedule h2,
-.form-section h2,
-.buffet-info-section h2,
-.buffet-gallery h2,
-.late-night h2,
-.accommodations-section h2 {
-    font-size: 2.6rem !important;
-}
-
-/* Make ALL section body text larger */
-.about p,
-.details p,
-.schedule ul li,
-.form-section p,
-.buffet-info-section p,
-.buffet-gallery p,
-.late-night p,
-.accommodations-section p {
-    font-size: 1.55rem !important;
-    line-height: 1.65;
-}
-
-/* ===== MOBILE FIX FOR VEGAS INTRO ===== */
-@media (max-width: 768px) {
-
+    /* MOBILE FIX FOR VEGAS INTRO */
     #vegas-intro {
-        height: auto !important;        /* allow SVG to shrink naturally */
+        height: auto !important;
     }
 
     #vegas-intro object {
         width: 100% !important;
-        height: auto !important;        /* proportional scaling */
-        aspect-ratio: auto;             /* prevents distortion */
+        height: auto !important;
+        aspect-ratio: auto;
         display: block;
     }
 }
