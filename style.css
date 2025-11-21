@@ -15,11 +15,6 @@
     display: block;
 }
 
-/* ---------- IMPORT FONTS ---------- */
-@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
-
 /* ---------- GLOBAL ---------- */
 body {
     margin: 0;
@@ -397,4 +392,5 @@ footer {
         display: block;
     }
 }
+
 
