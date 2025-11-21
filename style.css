@@ -26,7 +26,7 @@ body {
     background-size: auto;
     background-attachment: fixed;
 
-    font-size: 1.35rem;        /* Keep your enlarged size */
+    font-size: 1.45rem;        /* Keep your enlarged size */
     line-height: 1.55;         /* Improves readability dramatically */
 }
 
@@ -394,6 +394,7 @@ footer {
         display: block;
     }
 }
+
 
 
 
