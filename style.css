@@ -19,13 +19,15 @@
 body {
     margin: 0;
     font-family: "Cormorant Garamond", serif;
-    color: #333;
-
+    font-weight: 400;          /* Makes text thicker & easier to read */
+    color: #222;               /* Slightly darker, better contrast */
+    
     background: url('background-image.jpg') repeat;
     background-size: auto;
     background-attachment: fixed;
 
-    font-size: 1.35rem;
+    font-size: 1.35rem;        /* Keep your enlarged size */
+    line-height: 1.55;         /* Improves readability dramatically */
 }
 
 /* ⭐ UNIVERSAL HEADING RULE — CINZEL DECORATIVE */
@@ -392,5 +394,6 @@ footer {
         display: block;
     }
 }
+
 
 
