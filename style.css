@@ -163,7 +163,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .detail-item p {
-    font-size: 1.3rem;
+    font-size: 1.50rem;
     line-height: 1.5;
 }
 
@@ -395,6 +395,7 @@ footer {
         display: block;
     }
 }
+
 
 
 
